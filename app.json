@@ -4,7 +4,7 @@
     "slug": "focusapp",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/images/icon.png",
+    "icon": "./assets/images/inicio.png",
     "scheme": "focusapp",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
@@ -13,10 +13,19 @@
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/images/adaptive-icon.png",
-        "backgroundColor": "#ffffff"
+        "foregroundImage": "./assets/images/Background-linhas.png",
+        "backgroundColor": "#222222"
       },
-      "edgeToEdgeEnabled": true
+      "edgeToEdgeEnabled": true,
+      "backgroundColor": "#02112310",
+      "androidStatusBar": {
+        "visible": "leanback",
+        "backgroundColor": "#02112310"
+      },
+      "androidNavigationBar": {
+        "visible": "leanback",
+        "backgroundColor": "#02112310"
+      }
     },
     "web": {
       "bundler": "metro",
@@ -30,8 +39,8 @@
         {
           "image": "./assets/images/splash-icon.png",
           "imageWidth": 200,
-          "resizeMode": "contain",
-          "backgroundColor": "#ffffff"
+          "resizeMode": "fill",
+          "backgroundColor": "#222222"
         }
       ]
     ],
