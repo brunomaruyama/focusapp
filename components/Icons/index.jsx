@@ -59,7 +59,7 @@ const iconPencil = `<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.or
 
 const iconTrash = `<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path d="M6 7H18M9 7V5C9 4.44772 9.44772 4 10 4H14C14.5523 4 15 4.44772 15 5V7M6 7H18M6 7H18M6 7V19C6 19.5523 6.44772 20 7 20H17C17.5523 20 18 19.5523 18 19V7M10.5 11V17M13.5 11V17" stroke="#000000" stroke-width="2"></path></g></svg>`;
 
-const iconPlus = `<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path d="M12 5V19" stroke="#000000" stroke-width="2"></path><path d="M5 12H19" stroke="#000000" stroke-width="2"></path></g></svg>`;
+const iconPlus = `<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path d="M12 5V19" stroke="#b872ff" stroke-width="2"></path><path d="M5 12H19" stroke="#b872ff" stroke-width="2"></path></g></svg>`;
 
 export const IconPlay = () => {
   return (
@@ -130,7 +130,7 @@ export const IconPlus = () => {
       xml={iconPlus}
       width="24"
       height="24"
-      fill="#021123"
+      fill="#b872ff"
       viewBox="0 0 24 24"
       version="1.1"
     />
