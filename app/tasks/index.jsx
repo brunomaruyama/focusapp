@@ -7,7 +7,7 @@ import TaskItem from "../../components/TaskItem";
 import useTaskContext from "../../components/context/useTaskContext";
 
 export default function Tasks() {
-  const { tasks } = useTaskContext();
+  const { tasks, deleteTask, toggleTaskCompleted } = useTaskContext();
   const insets = useSafeAreaInsets();
 
   return (
@@ -20,6 +20,9 @@ export default function Tasks() {
               key={item.id}
               completed={item.completed}
               text={item.description}
+              onPressDelete={() => deleteTask(item.id)}
+              onToggleComplete={() => toggleTaskCompleted(item.id)}
+              onPressEdit={() => router.navigate(`/edit-task/${item.id}`)}
             />
           )}
           keyExtractor={(item) => item.id}
