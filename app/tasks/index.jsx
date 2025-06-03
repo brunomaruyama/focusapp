@@ -7,13 +7,19 @@ import TaskItem from "../../components/TaskItem";
 import useTaskContext from "../../components/context/useTaskContext";
 
 export default function Tasks() {
-  const { tasks, deleteTask, toggleTaskCompleted } = useTaskContext();
+  const { tasks, deleteTask, toggleTaskCompleted, updateTask } =
+    useTaskContext();
   const insets = useSafeAreaInsets();
 
   return (
     <View style={styles.container}>
       <View style={styles.taskList}>
         <FlatList
+          ListEmptyComponent={
+            <Text style={styles.textEmpty}>
+              Ainda não há tarefas, que tal adicionar?
+            </Text>
+          }
           data={tasks}
           renderItem={({ item }) => (
             <TaskItem
@@ -22,6 +28,7 @@ export default function Tasks() {
               text={item.description}
               onPressDelete={() => deleteTask(item.id)}
               onToggleComplete={() => toggleTaskCompleted(item.id)}
+              onEdit={() => updateTask(item.id)}
               onPressEdit={() => router.navigate(`/edit-task/${item.id}`)}
             />
           )}
@@ -63,5 +70,12 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     textAlign: "center",
     marginBottom: 16,
+  },
+  textEmpty: {
+    color: "#98a0a8",
+    fontSize: 18,
+    textAlign: "center",
+    marginTop: "40",
+    marginBottom: "40",
   },
 });

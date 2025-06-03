@@ -1,5 +1,5 @@
 import { useRef, useState } from "react";
-import { Image, StyleSheet, Text, View } from "react-native";
+import { Image, ScrollView, StyleSheet, Text, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { ActionButton } from "../components/ActionButton";
 import { FokusButton } from "../components/FokusButton";
@@ -71,7 +71,7 @@ export default function Pomodoro() {
 
   return (
     <SafeAreaView style={styles.safeArea}>
-      <View style={styles.container}>
+      <ScrollView contentContainerStyle={styles.inner}>
         <Image source={timerType.image} style={styles.image} />
         <View style={styles.actions}>
           <View style={styles.context}>
@@ -96,7 +96,7 @@ export default function Pomodoro() {
           <Text style={styles.footerText}>Projetos sem fins comerciais</Text>
           <Text style={styles.footerText}>Desenvolvido com Alura</Text>
         </View>
-      </View>
+      </ScrollView>
     </SafeAreaView>
   );
 }
@@ -106,11 +106,9 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: "#021123",
   },
-  container: {
-    flex: 1,
-    justifyContent: "center",
+
+  inner: {
     alignItems: "center",
-    backgroundColor: "#021123",
     gap: 40,
   },
   actions: {
